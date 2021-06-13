@@ -64,7 +64,7 @@ export default {
 
 <style scoped>
 .container {
-  height: 100vh;
+  min-height: 100vh;
   background: url("../assets/about-background.jpeg");
   background-position: center;
   background-repeat: no-repeat;
@@ -74,18 +74,17 @@ export default {
 }
 .blur {
   background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(7px);
+  backdrop-filter: blur(5px);
   width: 100%;
-  height: 100vh;
-  position: absolute;
+  min-height: 100%;
+  position: fixed;
 }
 .author {
   color: white;
-  padding: 1rem;
   position: absolute;
   transform: rotate(-90deg);
-  top: 5.9em;
-  right: -12.6rem;
+  top: 7em;
+  right: -11.5rem;
   font-size: 2rem;
   display: flex;
   align-items: center;
@@ -133,22 +132,23 @@ export default {
 }
 .content-text {
   font-size: 1.75rem;
-  max-width: 60%;
+  max-width: 70%;
   background: rgba(13, 9, 70, 0.6);
   display: flex;
-  padding: 3rem;
+  padding: 2rem;
   margin: auto;
 }
 
 .content-text::before {
-  content: "About me";
+  content: "About";
   color: white;
   transform: rotate(-90deg);
   display: block;
   left: 2rem;
   top: 1rem;
+  margin: 0 2rem 0 0;
   position: relative;
-  width: 100rem;
+  width: 10rem;
   height: 0.25rem;
   background: white;
   z-index: 1;
@@ -199,7 +199,47 @@ export default {
   padding: 1rem 0;
 }
 .down {
-  min-width: 6rem;
+  min-width: 7rem;
   max-width: 8rem;
+  position: relative;
+  z-index: 1;
+}
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 1023px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .content-title {
+    width: 100%;
+    font-size: 2.5rem;
+  }
+  .content-title::before {
+    content: "";
+    top: 4rem;
+    left: 3rem;
+    border: 0.35rem solid white;
+    position: absolute;
+    padding: 1.55rem 6rem;
+    background: rgba(19, 19, 19, 0.6);
+  }
+
+  .content-body {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+  }
+  .content-text {
+    font-size: 1.05rem;
+    max-width: 100%;
+    background: rgba(13, 9, 70, 0.6);
+    display: flex;
+    padding: 2rem;
+    margin: 0;
+  }
+  .content-text::before {
+    display: none;
+  }
 }
 </style>
