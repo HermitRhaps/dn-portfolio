@@ -1,15 +1,18 @@
 <template>
   <div id="app">
-    <Navbar />
+    <About />
+    <Projects />
   </div>
 </template>
 
 <script>
-import Navbar from "./components/Navbar";
+import About from "./components/About";
+import Projects from "./components/Projects";
 export default {
   name: "App",
   components: {
-    Navbar,
+    About,
+    Projects,
   },
 };
 </script>
@@ -22,7 +25,9 @@ export default {
   text-decoration: none;
   list-style: none;
 }
-
+body {
+  background: black;
+}
 #app {
   font-family: "Roboto Slab", serif;
 }
