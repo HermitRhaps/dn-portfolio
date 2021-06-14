@@ -1,23 +1,23 @@
 <template>
   <div id="app">
     <About />
-    <!-- <Projects /> -->
+    <Projects />
   </div>
 </template>
 
 <script>
 import About from "./components/About";
-// import Projects from "./components/Projects";
+import Projects from "./components/Projects";
 export default {
   name: "App",
   components: {
     About,
-    // Projects,
+    Projects,
   },
 };
 </script>
 
-<style>
+<style >
 * {
   box-sizing: border-box;
   margin: 0;

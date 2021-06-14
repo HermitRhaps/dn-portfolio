@@ -131,7 +131,7 @@ export default {
   text-align: justify;
 }
 .content-text {
-  font-size: 1.75rem;
+  font-size: 1.55rem;
   max-width: 70%;
   background: rgba(13, 9, 70, 0.6);
   display: flex;
@@ -156,12 +156,12 @@ export default {
 
 .content-text::after {
   content: "";
-  top: 5rem;
+  top: 1.45rem;
   left: -36rem;
   transform: rotate(145deg);
   position: absolute;
-  padding: 25rem 80rem;
-  background: rgba(209, 153, 31, 1);
+  padding: 25rem 85rem;
+  background: #d14646;
   z-index: 0;
 }
 
