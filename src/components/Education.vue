@@ -7,7 +7,7 @@
             <div class="e-year">2015-2020</div>
           </div>
           <div class="e-part">
-            <div class="e-year">2020-2021</div>
+            <div class="e-year">2020-2020(6m.)</div>
           </div>
         </div>
       </div>
@@ -78,8 +78,8 @@ export default {
 .e-year {
   position: absolute;
   top: 1rem;
-  right: 1rem;
-  font-size: 2rem;
+  right: 3rem;
+  font-size: 1.6rem;
   color: black;
   width: 10vw;
 }
