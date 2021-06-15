@@ -3,6 +3,7 @@
     <About />
     <Education />
     <Skills />
+    <Contacts />
   </div>
 </template>
 
@@ -10,12 +11,14 @@
 import About from "./components/About";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
+import Contacts from "./components/Contacts.vue";
 export default {
   name: "App",
   components: {
     About,
     Education,
     Skills,
+    Contacts,
   },
 };
 </script>
@@ -48,7 +51,9 @@ body {
   position: absolute;
   top: 0;
   left: 2rem;
+  overflow: hidden;
 }
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 1023px) {
   .part {
     font-size: 3rem;

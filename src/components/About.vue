@@ -8,10 +8,6 @@
         <div class="logo">
           <img src="../assets/dnLOGO.svg" alt="myLogo" />
         </div>
-
-        <div class="job">
-          <span>Frontend Developer</span>
-        </div>
       </div>
       <div class="content">
         <div class="part">
@@ -22,6 +18,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#contacts">Contacts</a></li>
           </ul>
         </div>
       </div>
@@ -56,27 +53,25 @@ export default {
   text-indent: 16.8rem;
   line-height: 11.4rem;
 }
+.author::before {
+  content: "Frontend Developer";
+  display: block;
+  padding: 1rem;
+  position: absolute;
+  top: -15rem;
+  left: 0.8rem;
+  font-size: 5rem;
+}
 .logo {
   filter: invert(1);
   animation: logo 2s forwards;
-}
-.job {
-  position: absolute;
-  mix-blend-mode: difference;
-  font-size: 5rem;
-  color: white;
-  top: bottom;
-  right: -50rem;
-  line-height: 5rem;
-  z-index: 1;
-  padding: 10.2rem;
 }
 .navigation {
   position: fixed;
   right: 0;
   text-align: right;
   padding: 5rem;
-  font-size: 7rem;
+  font-size: 4rem;
   z-index: 1;
   color: rgb(236, 238, 233);
   mix-blend-mode: difference;
@@ -110,8 +105,9 @@ export default {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 1023px) {
   .header {
-    width: 40vw;
+    width: 26vw;
   }
+
   .author {
     padding: 1rem;
     font-size: 4.5rem;
@@ -119,14 +115,24 @@ export default {
     text-indent: 4rem;
     line-height: 3rem;
   }
+  .author::before {
+    content: "Frontend Developer";
+    display: block;
+    padding: 1rem;
+    position: absolute;
+    top: -6rem;
+    left: 0.8rem;
+    font-size: 2rem;
+  }
   .navigation {
     position: fixed;
     right: 0;
     text-align: right;
     padding: 3rem 1rem;
-    font-size: 2rem;
+    font-size: 1.45rem;
     z-index: 1;
     color: rgb(236, 238, 233);
+
     mix-blend-mode: difference;
   }
   .job {

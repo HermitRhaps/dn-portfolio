@@ -71,7 +71,7 @@ export default {
   justify-content: space-around;
 }
 .e-part {
-  height: 1.5%;
+  min-height: 0.75rem;
   background: rgb(30, 30, 36);
   position: relative;
 }
@@ -104,14 +104,14 @@ export default {
     width: 95%;
   }
   .e-year {
-    font-size: 1.5rem;
+    font-size: 1rem;
     right: 3rem;
   }
   .e-description {
     padding: 5rem 1rem;
   }
   .e-d-item {
-    font-size: 2rem;
+    font-size: 1.65rem;
   }
   .e-d-before {
     font-size: 0.75rem;
