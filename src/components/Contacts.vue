@@ -40,8 +40,8 @@ export default {
   padding: 1rem;
   transform: rotate(-45deg);
   background-color: rgb(30, 30, 36);
-  left: 0;
-  bottom: -50rem;
+  left: -20vw;
+  top: 60vh;
 }
 .part-c {
   content: "1";

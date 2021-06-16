@@ -1,16 +1,7 @@
 <template>
   <div id="education">
     <div class="container">
-      <div class="header">
-        <div class="e-time">
-          <div class="e-part">
-            <div class="e-year">2015-2020</div>
-          </div>
-          <div class="e-part">
-            <div class="e-year">2020-2020(6m.)</div>
-          </div>
-        </div>
-      </div>
+      <div class="header"></div>
       <div class="content">
         <div class="part">
           <span>E</span>
@@ -49,40 +40,21 @@ export default {
   background-color: rgb(30, 30, 36);
   position: relative;
 }
-.e-time {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 35%;
-  justify-content: space-around;
-  position: absolute;
-  padding: 20rem 0;
-  top: 0;
-  bottom: 0;
-  left: 25rem;
-  right: 0;
-}
+
 .e-description {
   display: flex;
-  padding: 20rem 3rem;
+  padding: 0 5vw;
   flex-direction: column;
-  height: 100%;
-  width: 35%;
-  justify-content: space-around;
+  height: 100vh;
+  width: 40%;
+  justify-content: center;
 }
 .e-part {
   min-height: 0.75rem;
+  width: 100%;
   background: rgb(30, 30, 36);
-  position: relative;
 }
-.e-year {
-  position: absolute;
-  top: 1rem;
-  right: 3rem;
-  font-size: 1.6rem;
-  color: black;
-  width: 10vw;
-}
+
 .e-d-item {
   font-size: 5rem;
   color: rgb(236, 238, 233);
@@ -98,15 +70,7 @@ export default {
   .header {
     width: 40vw;
   }
-  .e-time {
-    padding: 5rem 0;
-    left: 1rem;
-    width: 95%;
-  }
-  .e-year {
-    font-size: 1rem;
-    right: 3rem;
-  }
+
   .e-description {
     padding: 5rem 1rem;
   }

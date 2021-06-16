@@ -1,24 +1,20 @@
 <template>
   <div id="app">
-    <About />
-    <Education />
-    <Skills />
-    <Contacts />
+    <div class="container">
+      <Initial />
+      <About />
+    </div>
   </div>
 </template>
 
 <script>
-import About from "./components/About";
-import Education from "./components/Education";
-import Skills from "./components/Skills";
-import Contacts from "./components/Contacts.vue";
+import Initial from "./components/Initial.vue";
+import About from "./components/About.vue";
 export default {
   name: "App",
   components: {
+    Initial,
     About,
-    Education,
-    Skills,
-    Contacts,
   },
 };
 </script>
@@ -38,26 +34,10 @@ html {
 }
 body {
   overflow: hidden;
-  background-color: rgb(236, 238, 233);
 }
-.container {
+#app {
   height: 100vh;
-  display: flex;
-  overflow: hidden;
-}
-.part {
-  font-size: 5rem;
-  color: white;
-  position: absolute;
-  top: 0;
-  left: 2rem;
-  overflow: hidden;
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 1023px) {
-  .part {
-    font-size: 3rem;
-    left: 1rem;
-  }
+  width: 100vw;
+  background-color: rgb(236, 238, 233);
 }
 </style>
