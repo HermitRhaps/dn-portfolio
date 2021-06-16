@@ -9,18 +9,22 @@
           <span>Dmitry Nemov</span>
         </div>
       </div>
-      <div class="body">
+      <div class="i-body">
         <div class="parts">
-          <a href="#about" class="part" data-part="2"><div data-part="1" /></a>
-          <div class="part" />
+          <a href="#about" class="part" data-part="1"><div data-part="1" /></a>
+          <a href="#education" class="part" data-part="2"
+            ><div data-part="2"
+          /></a>
           <div class="part" data-part="3" />
           <div class="part" data-part="4" />
         </div>
       </div>
       <div class="footer">
-        <div class="down-holder">
-          <img src="../assets/arrow-down.svg" alt="down" />
-        </div>
+        <a href="#about">
+          <div class="down-holder">
+            <img src="../assets/arrow-down.svg" alt="down" />
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -34,7 +38,7 @@ export default {
       if (e.target.classList.contains("part")) {
         document.querySelectorAll(".part").forEach((el) => {
           if (el.dataset.part !== e.target.dataset.part) {
-            el.style["display"] = "none";
+            el.style["opacity"] = "0";
           } else {
             el.classList.add("part-active");
           }
@@ -45,7 +49,7 @@ export default {
       if (!e.target.classList.contains("part")) {
         document.querySelectorAll(".part").forEach((el) => {
           el.classList.remove("part-active");
-          el.style["display"] = "block";
+          el.style["opacity"] = "1";
         });
       }
     });
@@ -58,16 +62,6 @@ export default {
 </script>
 
 <style scoped>
-#initial {
-  height: 100vh;
-  width: 100vw;
-  padding: 2vw;
-}
-.container {
-  height: 100%;
-  width: 100%;
-  background-color: rgb(236, 238, 233);
-}
 .header {
   display: flex;
   justify-content: center;
@@ -215,7 +209,7 @@ export default {
   justify-content: flex-end;
   align-items: center;
   text-align: center;
-  padding: 0.25vh;
+  padding: 1vh;
   position: absolute;
   bottom: 0;
   right: 0;

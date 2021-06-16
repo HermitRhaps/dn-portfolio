@@ -8,12 +8,16 @@
         <div class="detail">
           <span>About me.</span>
         </div>
-        <div class="up">
-          <img src="../assets/arrow-down.svg" alt="arrow" />
-        </div>
-        <div class="down">
-          <img src="../assets/arrow-down.svg" alt="arrow" />
-        </div>
+        <a href="#">
+          <div class="up">
+            <img src="../assets/arrow-down.svg" alt="arrow" />
+          </div>
+        </a>
+        <a href="#education">
+          <div class="down">
+            <img src="../assets/arrow-down.svg" alt="arrow" />
+          </div>
+        </a>
       </div>
       <div class="body">
         <div class="description">
@@ -97,58 +101,8 @@ export default {
 </script>
 
 <style scoped>
-#about {
-  height: 100vh;
-  width: 100vw;
-  background-color: rgb(236, 238, 233);
-}
-.container {
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
 .header {
-  height: 25vh;
-  overflow: hidden;
   background-image: url("../assets/about.jpeg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.icon {
-  background-color: black;
-  border: 0.75vh solid rgb(236, 238, 233);
-  padding: 1vh;
-  z-index: 2;
-  position: absolute;
-  top: 20vh;
-  left: 5vh;
-}
-.detail {
-  padding: 1vh;
-  z-index: 2;
-  position: absolute;
-  top: 24.9vh;
-  left: 19vh;
-  color: black;
-  font-size: 6vh;
-  text-decoration: underline;
-}
-.icon > img {
-  filter: invert(1);
-  width: 10vh;
-}
-.body {
-  height: 75vh;
-  padding: 10vh 5vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.description {
-  font-size: 3vh;
-  text-align: justify;
-  width: 45vw;
 }
 .skills {
   width: 45vw;
@@ -170,31 +124,5 @@ export default {
 }
 .s-item > .i-icon > img {
   min-width: 4vw;
-}
-.up {
-  padding: 1vh;
-  z-index: 2;
-  position: absolute;
-  top: 25vh;
-  right: 0vh;
-  font-size: 6vh;
-  text-decoration: underline;
-}
-.down {
-  padding: 1vh;
-  z-index: 2;
-  position: absolute;
-  bottom: 1vh;
-  right: 0vh;
-  font-size: 6vh;
-  text-decoration: underline;
-}
-.up > img {
-  transform: rotate(180deg);
-  width: 5vw;
-}
-
-.down > img {
-  width: 5vw;
 }
 </style>

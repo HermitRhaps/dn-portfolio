@@ -1,22 +1,40 @@
 <template>
   <div id="education">
     <div class="container">
-      <div class="header"></div>
-      <div class="content">
-        <div class="part">
-          <span>E</span>
+      <div class="header">
+        <div class="icon">
+          <img src="../assets/card-icon.svg" alt="icon" />
         </div>
-        <div class="e-description">
-          <div class="e-d-item">
-            BNTU
-            <div class="e-d-after">Information technology software</div>
-            <div class="e-d-before">Software Engineer</div>
+        <div class="detail">
+          <span>Education.</span>
+        </div>
+        <a href="#about">
+          <div class="up">
+            <img src="../assets/arrow-down.svg" alt="arrow" />
           </div>
-          <div class="e-d-item">
-            TEACHMESKILLS
-            <div class="e-d-after">Frontend Developer</div>
-            <div class="e-d-before">Student with certificate</div>
-          </div>
+        </a>
+        <div class="down">
+          <img src="../assets/arrow-down.svg" alt="arrow" />
+        </div>
+      </div>
+      <div class="body">
+        <div class="graph">
+          <div class="initial" />
+          <div class="middle">Software Engineer</div>
+          <div class="end">Student lab</div>
+        </div>
+        <div class="description">
+          <span
+            >Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.</span
+          >
         </div>
       </div>
     </div>
@@ -31,57 +49,43 @@ export default {
 
 <style scoped>
 .header {
-  width: 25vw;
-  color: rgb(236, 238, 233);
+  background-image: url("../assets/education.jpeg");
+}
+.graph {
+  font-size: 5vh;
+}
+.initial,
+.middle,
+.end {
+  font-size: 3vh;
+}
+.initial,
+.middle {
   position: relative;
 }
-.content {
-  width: 75vw;
-  background-color: rgb(30, 30, 36);
-  position: relative;
-}
-
-.e-description {
+.initial::before {
+  content: "School";
   display: flex;
-  padding: 0 5vw;
-  flex-direction: column;
-  height: 100vh;
-  width: 40%;
-  justify-content: center;
+  font-size: 5vh;
 }
-.e-part {
-  min-height: 0.75rem;
-  width: 100%;
-  background: rgb(30, 30, 36);
+.middle::before {
+  content: "BNTU";
+  display: flex;
+  font-size: 5vh;
 }
-
-.e-d-item {
-  font-size: 5rem;
-  color: rgb(236, 238, 233);
+.end::before {
+  content: "TeachMeSkill";
+  display: flex;
+  font-size: 5vh;
 }
-.e-d-before {
-  font-size: 1.2rem;
-}
-.e-d-after {
-  font-size: 1.75rem;
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 1023px) {
-  .header {
-    width: 40vw;
-  }
-
-  .e-description {
-    padding: 5rem 1rem;
-  }
-  .e-d-item {
-    font-size: 1.65rem;
-  }
-  .e-d-before {
-    font-size: 0.75rem;
-  }
-  .e-d-after {
-    font-size: 1.25rem;
-  }
+.initial::after,
+.middle::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 0.4vw;
+  height: 10vh;
+  left: 5vh;
+  background: black;
 }
 </style>
