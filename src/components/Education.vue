@@ -48,6 +48,9 @@ export default {
 </script>
 
 <style scoped>
+.body {
+  padding: 0 10vw;
+}
 .header {
   background-image: url("../assets/education.jpeg");
 }

@@ -104,8 +104,11 @@ export default {
 .header {
   background-image: url("../assets/about.jpeg");
 }
+.body {
+  padding: 0 5vw;
+}
 .skills {
-  width: 45vw;
+  width: 40vw;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;

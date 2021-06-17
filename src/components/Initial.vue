@@ -5,6 +5,9 @@
         <div class="logo-holder">
           <img src="../assets/logo.svg" alt="logo" class="logo" />
         </div>
+        <div class="theme">
+          <img src="../assets/theme.svg" alt="theme" />
+        </div>
         <div class="author-holder">
           <span>Dmitry Nemov</span>
         </div>
@@ -34,24 +37,8 @@
 export default {
   name: "Initial",
   mounted: function () {
-    document.addEventListener("mouseover", function (e) {
-      if (e.target.classList.contains("part")) {
-        document.querySelectorAll(".part").forEach((el) => {
-          if (el.dataset.part !== e.target.dataset.part) {
-            el.style["opacity"] = "0";
-          } else {
-            el.classList.add("part-active");
-          }
-        });
-      }
-    });
-    document.addEventListener("mouseover", function (e) {
-      if (!e.target.classList.contains("part")) {
-        document.querySelectorAll(".part").forEach((el) => {
-          el.classList.remove("part-active");
-          el.style["opacity"] = "1";
-        });
-      }
+    document.querySelector(".theme").addEventListener("click", function () {
+      document.querySelector(".container").classList.toggle("invert");
     });
   },
   data: function () {
@@ -60,7 +47,20 @@ export default {
   methods: {},
 };
 </script>
+<style>
+.invert {
+  filter: invert(1);
+}
+.invert .i-body > .parts > .part {
+  filter: invert(1);
+  color: white;
+}
 
+.invert > .header > .icon {
+  filter: invert(0);
+  z-index: 2;
+}
+</style>
 <style scoped>
 .header {
   display: flex;
@@ -158,50 +158,26 @@ export default {
   background-repeat: no-repeat;
   transition-duration: 2s;
 }
-.part:nth-child(1):hover:before {
-  font-size: 5vw;
-  top: -11.5vh;
-  text-decoration: underline;
-}
-.part:nth-child(2):hover:before {
-  font-size: 5vw;
-  top: -11.5vh;
-  text-decoration: underline;
-}
-.part:nth-child(3):hover:before {
-  font-size: 5vw;
-  top: -11.5vh;
-  text-decoration: underline;
-}
+.part:nth-child(1):hover:before,
+.part:nth-child(2):hover:before,
+.part:nth-child(3):hover:before,
 .part:nth-child(4):hover:before {
-  font-size: 5vw;
-  top: -11.5vh;
-  text-decoration: underline;
+  font-size: 3vw;
+  top: 25vh;
+  text-align: center;
+  width: 100vw;
+  color: rgb(236, 238, 233);
+  animation: textShownUp 1.5s forwards;
+  text-shadow: 1px 0 0 black, 0 1px 0 black, -1px 0 0 black, 0 -1px 0 black;
 }
-.part:nth-child(1):hover {
-  background-position: bottom;
-  background-size: cover;
-}
-.part:nth-child(2):hover {
-  background-position: bottom;
-  background-size: cover;
-}
-.part:nth-child(3):hover {
-  background-position: bottom;
-  background-size: cover;
-}
-.part-active {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  transition-duration: 3s;
 
-  z-index: 2;
-}
+.part:nth-child(1):hover,
+.part:nth-child(2):hover,
+.part:nth-child(3):hover,
 .part:nth-child(4):hover {
-  background-position: bottom;
   background-size: cover;
-  backdrop-filter: inherit;
+  min-width: 60vw;
+  overflow: hidden;
 }
 
 .down-holder {
@@ -216,5 +192,23 @@ export default {
 }
 .down-holder > img {
   width: 5vw;
+}
+.theme {
+  position: absolute;
+  top: 0;
+  padding: 1vh;
+}
+.theme > img {
+  width: 5vh;
+}
+@keyframes textShownUp {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
 }
 </style>

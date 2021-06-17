@@ -33,7 +33,7 @@ export default {
   font-family: "Roboto Slab", serif;
 }
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 body {
   overflow: hidden;
@@ -106,7 +106,7 @@ body {
   padding: 1vh;
   z-index: 2;
   position: absolute;
-  bottom: 1vh;
+  bottom: -1.6vh;
   right: 0vh;
   font-size: 6vh;
   text-decoration: underline;
@@ -121,7 +121,6 @@ body {
 .down-holder > img:hover,
 .up > img:hover,
 .down > img:hover {
-  padding: 1vh;
   border-radius: 50%;
   background: white;
   filter: invert(1);
