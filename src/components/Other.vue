@@ -99,6 +99,10 @@ export default {
   align-items: center;
   justify-content: flex-start;
 }
+.invert .terminal {
+  filter: invert(1);
+  border: 1vh solid white;
+}
 .button-exit {
   width: 5%;
   border-radius: 50%;

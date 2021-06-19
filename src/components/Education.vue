@@ -83,11 +83,17 @@ export default {
 .current {
   opacity: 1;
 }
+.invert .content-img img {
+  filter: invert(1);
+}
 @media only screen and (min-device-width: 320px) and (max-device-width: 1023px) {
   .content-img {
     width: 100vw;
     flex-direction: column;
     justify-content: center;
+  }
+  .body::before {
+    font-size: 7vh;
   }
   .content-img .img:nth-child(1) {
     align-self: flex-start;

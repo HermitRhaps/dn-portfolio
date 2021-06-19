@@ -99,6 +99,20 @@ export default {
   background: black;
   margin: 1vw 0;
 }
+.invert > .description span::after {
+  filter: invert(0);
+  background: white;
+}
+.invert .description span::before {
+  filter: invert(1);
+  color: white;
+}
+.invert .header span::before {
+  background: white;
+}
+.invert .content-img img {
+  filter: invert(1);
+}
 .current > .content-img {
   animation: contentImgMoveIn 3s forwards;
 }
