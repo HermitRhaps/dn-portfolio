@@ -1,40 +1,23 @@
 <template>
   <div id="education">
-    <div class="container">
-      <div class="header">
-        <div class="icon">
-          <img src="../assets/card-icon.svg" alt="icon" />
-        </div>
-        <div class="detail">
-          <span>Education.</span>
-        </div>
-        <a href="#about">
-          <div class="up">
-            <img src="../assets/arrow-down.svg" alt="arrow" />
-          </div>
-        </a>
-        <div class="down">
-          <img src="../assets/arrow-down.svg" alt="arrow" />
-        </div>
-      </div>
+    <div class="container education">
       <div class="body">
-        <div class="graph">
-          <div class="initial" />
-          <div class="middle">Software Engineer</div>
-          <div class="end">Student lab</div>
-        </div>
-        <div class="description">
-          <span
-            >Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.</span
-          >
+        <div class="content-img">
+          <div class="img">
+            <span>School</span>
+            <img src="../assets/school.jpeg" alt="content-img-1" />
+            <span>11 years</span>
+          </div>
+          <div class="img">
+            <span>BNTU</span>
+            <img src="../assets/books-img.jpeg" alt="content-img-2" />
+            <span>Software engineer</span>
+          </div>
+          <div class="img">
+            <span>TeachMeSkills</span>
+            <img src="../assets/courses.jpeg" alt="content-img-3" />
+            <span>Student Lab</span>
+          </div>
         </div>
       </div>
     </div>
@@ -49,46 +32,64 @@ export default {
 
 <style scoped>
 .body {
-  padding: 0 10vw;
-}
-.header {
-  background-image: url("../assets/education.jpeg");
-}
-.graph {
-  font-size: 5vh;
-}
-.initial,
-.middle,
-.end {
-  font-size: 3vh;
-}
-.initial,
-.middle {
-  position: relative;
-}
-.initial::before {
-  content: "School";
+  height: 100vh;
+  width: 100vw;
+  padding: 5vw;
   display: flex;
-  font-size: 5vh;
+  align-items: center;
+  justify-content: center;
 }
-.middle::before {
-  content: "BNTU";
+.current {
+  opacity: 0;
+}
+.content-img {
+  width: 85vw;
+  height: 100%;
+  padding: 1vh;
   display: flex;
-  font-size: 5vh;
 }
-.end::before {
-  content: "TeachMeSkill";
+.content-img .img {
+  width: 100%;
+  max-height: 75%;
   display: flex;
-  font-size: 5vh;
+  flex-direction: column;
+  padding: 1vh;
 }
-.initial::after,
-.middle::after {
-  content: "";
+
+.content-img .img span {
+  font-size: 3vw;
+}
+.content-img .img img {
+  height: auto;
+  min-width: 10%;
+}
+
+.body::before {
+  content: "Education";
+  right: 1vw;
+  top: 1vw;
   display: block;
-  position: relative;
-  width: 0.4vw;
-  height: 10vh;
-  left: 5vh;
-  background: black;
+  position: absolute;
+  font-size: 10vh;
+  padding: 1vw;
+  border-right: 1vw solid black;
+}
+.content-img .img span:last-of-type {
+  font-size: 2vw;
+}
+.content-img .img:nth-child(1) {
+  align-self: flex-start;
+  max-width: 30%;
+}
+.content-img .img:nth-child(2) {
+  align-self: center;
+  max-width: 25%;
+}
+.content-img .img:nth-child(3) {
+  align-self: flex-end;
+  max-width: 45%;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 1023px) {
 }
 </style>

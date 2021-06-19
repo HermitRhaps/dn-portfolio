@@ -19,6 +19,13 @@ export default {
     About,
     Education,
   },
+  mounted: function () {
+    window.addEventListener("scroll", function () {
+      document
+        .elementFromPoint(window.scrollX, window.scrollY)
+        .classList.add("current");
+    });
+  },
 };
 </script>
 
@@ -32,12 +39,6 @@ export default {
   list-style: none;
   font-family: "Roboto Slab", serif;
 }
-html {
-  /* scroll-behavior: smooth; */
-}
-body {
-  overflow: hidden;
-}
 #app,
 #about,
 #initial,
@@ -47,9 +48,9 @@ body {
   background-color: rgb(236, 238, 233);
 }
 .container {
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  position: relative;
+  /* overflow: hidden; */
 }
 .header {
   height: 25vh;
@@ -57,13 +58,14 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
 .body {
-  height: 75vh;
-  padding: 10vh 5vh;
+  min-height: 75vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .description {
   font-size: 3vh;
@@ -72,41 +74,31 @@ body {
 }
 .icon {
   background-color: black;
-  border: 0.75vh solid rgb(236, 238, 233);
+  border: 0.35vh solid rgb(236, 238, 233);
   padding: 1vh;
-  z-index: 2;
   position: absolute;
-  top: 20vh;
-  left: 5vh;
+  top: 1vh;
+  left: 1vh;
 }
 .detail {
   padding: 1vh;
   z-index: 2;
   position: absolute;
-  top: 24.9vh;
-  left: 19vh;
-  color: black;
-  font-size: 6vh;
-  text-decoration: underline;
+  bottom: -2.5vh;
+  left: 15vh;
+  color: white;
+  font-size: 7vw;
+  text-shadow: 1px 0 0 black, 0 1px 0 black, -1px 0 0 black, 0 -1px 0 black;
 }
 .icon > img {
   filter: invert(1);
-  width: 10vh;
+  width: 8vh;
 }
 .up {
   padding: 1vh;
   z-index: 2;
-  position: absolute;
-  top: 25vh;
-  right: 0vh;
-  font-size: 6vh;
-  text-decoration: underline;
-}
-.down {
-  padding: 1vh;
-  z-index: 2;
-  position: absolute;
-  bottom: -1.6vh;
+  position: fixed;
+  bottom: 0vh;
   right: 0vh;
   font-size: 6vh;
   text-decoration: underline;
@@ -114,15 +106,47 @@ body {
 .up > img {
   transform: rotate(180deg);
   width: 5vw;
+  opacity: 0;
 }
-.down > img {
-  width: 5vw;
-}
-.down-holder > img:hover,
-.up > img:hover,
-.down > img:hover {
+
+.up > img:hover {
   border-radius: 50%;
   background: white;
   filter: invert(1);
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 1023px) {
+  .icon {
+    background-color: black;
+    border: 1vh solid rgb(236, 238, 233);
+    padding: 1vh;
+    z-index: 2;
+    position: absolute;
+    top: 1vh;
+    left: 1vh;
+    border-radius: 50%;
+  }
+  .detail {
+    top: 2vh;
+    left: 15vh;
+    font-size: 13vw;
+  }
+  .body {
+    flex-direction: column;
+  }
+  .description {
+    padding: 2vh 0;
+    font-size: 2.2vh;
+    width: 87vw;
+  }
+
+  .up {
+    right: -1vh;
+  }
+  .up > img {
+    width: 6vw;
+  }
+  .body {
+    height: 85vh;
+  }
 }
 </style>

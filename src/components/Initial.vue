@@ -22,13 +22,6 @@
           <div class="part" data-part="4" />
         </div>
       </div>
-      <div class="footer">
-        <a href="#about">
-          <div class="down-holder">
-            <img src="../assets/arrow-down.svg" alt="down" />
-          </div>
-        </a>
-      </div>
     </div>
   </div>
 </template>
@@ -55,9 +48,17 @@ export default {
   filter: invert(1);
   color: white;
 }
-
-.invert > .header > .icon {
-  filter: invert(0);
+.invert .header {
+  filter: invert(1);
+  z-index: 2;
+  color: white;
+}
+.invert .logo-holder {
+  filter: invert(1);
+  z-index: 2;
+}
+.invert .theme {
+  filter: invert(1);
   z-index: 2;
 }
 </style>
@@ -73,13 +74,13 @@ export default {
   padding: 0.45vw;
 }
 .logo {
-  min-width: 6vw;
-  max-width: 8vw;
+  min-width: 10vh;
+  max-width: 12vh;
   filter: invert(1);
 }
 .author-holder {
   padding: 0.15vw;
-  font-size: 3vw;
+  font-size: 6vh;
 }
 .author-holder > span {
   position: relative;
@@ -89,9 +90,9 @@ export default {
 .author-holder > span::after {
   content: "Frontend Developer";
   position: absolute;
-  font-size: 1.2vw;
+  font-size: 2.5vh;
   right: 0;
-  bottom: 0;
+  top: -0.45vh;
   transition-duration: 2s;
 }
 .parts {
@@ -115,8 +116,7 @@ export default {
 .part:nth-child(1)::before {
   content: "About.";
   position: absolute;
-  font-size: 1.2vw;
-  font-size: 2vw;
+  font-size: 1.6vw;
   bottom: -5vh;
 }
 .part:nth-child(2) {
@@ -128,22 +128,19 @@ export default {
 .part:nth-child(2)::before {
   content: "Education.";
   position: absolute;
-  font-size: 1.2vw;
-  font-size: 2vw;
+  font-size: 1.6vw;
   bottom: -5vh;
 }
 .part:nth-child(3)::before {
   content: "Knowledge.";
   position: absolute;
-  font-size: 1.2vw;
-  font-size: 2vw;
+  font-size: 1.6vw;
   bottom: -5vh;
 }
 .part:nth-child(4)::before {
   content: "Talk w/ me.";
   position: absolute;
-  font-size: 1.2vw;
-  font-size: 2vw;
+  font-size: 1.6vw;
   bottom: -5vh;
 }
 .part:nth-child(3) {
@@ -180,19 +177,6 @@ export default {
   overflow: hidden;
 }
 
-.down-holder {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  text-align: center;
-  padding: 1vh;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-.down-holder > img {
-  width: 5vw;
-}
 .theme {
   position: absolute;
   top: 0;
@@ -209,6 +193,22 @@ export default {
   100% {
     opacity: 1;
     filter: blur(0px);
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 1023px) {
+  .parts {
+    min-width: 90vw;
+  }
+  .part {
+    min-width: 24.5vw;
+    min-height: 60vh;
+  }
+  .part:nth-child(1)::before,
+  .part:nth-child(2)::before,
+  .part:nth-child(3)::before,
+  .part:nth-child(4)::before {
+    bottom: -4vh;
+    font-size: 4vw;
   }
 }
 </style>

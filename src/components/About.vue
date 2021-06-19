@@ -1,25 +1,16 @@
 <template>
   <div id="about">
-    <div class="container">
-      <div class="header">
-        <div class="icon">
-          <img src="../assets/card-icon.svg" alt="icon" />
-        </div>
-        <div class="detail">
-          <span>About me.</span>
-        </div>
-        <a href="#">
-          <div class="up">
-            <img src="../assets/arrow-down.svg" alt="arrow" />
-          </div>
-        </a>
-        <a href="#education">
-          <div class="down">
-            <img src="../assets/arrow-down.svg" alt="arrow" />
-          </div>
-        </a>
-      </div>
+    <div class="container about">
       <div class="body">
+        <div class="header">
+          <span
+            >Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.</span
+          >
+        </div>
+        <div class="content-img">
+          <img src="../assets/old_comp.jpeg" alt="content-img" />
+        </div>
         <div class="description">
           <span
             >Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -33,62 +24,6 @@
             PageMaker including versions of Lorem Ipsum.</span
           >
         </div>
-        <div class="skills">
-          <div class="s-item">
-            <div class="i-icon">
-              <img src="../assets/css.svg" alt="css" />
-            </div>
-            <div class="i-title">CSS</div>
-          </div>
-          <div class="s-item">
-            <div class="i-icon">
-              <img src="../assets/html.svg" alt="html" />
-            </div>
-            <div class="i-title">HTML</div>
-          </div>
-          <div class="s-item">
-            <div class="i-icon">
-              <img src="../assets/js.svg" alt="js" />
-            </div>
-            <div class="i-title">JS</div>
-          </div>
-          <div class="s-item">
-            <div class="i-icon">
-              <img src="../assets/database.svg" alt="db" />
-            </div>
-            <div class="i-title">SQL</div>
-          </div>
-          <div class="s-item">
-            <div class="i-icon">
-              <img src="../assets/github.svg" alt="github" />
-            </div>
-            <div class="i-title">Github</div>
-          </div>
-          <div class="s-item">
-            <div class="i-icon">
-              <img src="../assets/reactjs.svg" alt="react" />
-            </div>
-            <div class="i-title">React</div>
-          </div>
-          <div class="s-item">
-            <div class="i-icon">
-              <img src="../assets/nodejs.svg" alt="nodejs" />
-            </div>
-            <div class="i-title">Node JS</div>
-          </div>
-          <div class="s-item">
-            <div class="i-icon">
-              <img src="../assets/ui.svg" alt="ui/ux" />
-            </div>
-            <div class="i-title">UX/UI</div>
-          </div>
-          <div class="s-item">
-            <div class="i-icon">
-              <img src="../assets/database-orm.svg" alt="ORM" />
-            </div>
-            <div class="i-title">ORM</div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -101,31 +36,110 @@ export default {
 </script>
 
 <style scoped>
-.header {
-  background-image: url("../assets/about.jpeg");
-}
 .body {
-  padding: 0 5vw;
+  height: 100vh;
+  width: 100vw;
+  padding: 5vw;
+  position: relative;
 }
-.skills {
+.content-img {
   width: 40vw;
   display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-}
-.s-item {
-  height: 15vh;
-  min-width: 8vw;
-  background: black;
-  color: white;
-  display: flex;
-  text-align: center;
   justify-content: center;
-  flex-direction: column;
-  font-size: 3vh;
-  margin: 0.85vh;
+  align-items: center;
+  position: relative;
+  border-left: 0.7vw solid black;
+  transform: translateX(-100vw);
 }
-.s-item > .i-icon > img {
-  min-width: 4vw;
+.header {
+  position: absolute;
+  top: 0;
+  left: 1vw;
+  font-size: 2.2vw;
+  opacity: 0;
+  transition-duration: 2s;
+}
+.description {
+  opacity: 0;
+  transition-duration: 4s;
+  position: relative;
+}
+.description > span::before {
+  content: "👋 i'm Nemov Dmitry";
+  display: block;
+  position: absolute;
+  font-size: 3vw;
+  top: 7vw;
+  right: -0.6vw;
+}
+.content-img > img {
+  width: 95%;
+}
+.current > .header {
+  opacity: 1;
+}
+.current > .header span::before {
+  content: "";
+  display: block;
+  font-size: 5vw;
+  width: 100%;
+  height: 1vh;
+  background: black;
+  top: -6vw;
+  left: -0.6vw;
+}
+
+.current > .description {
+  opacity: 1;
+}
+.current > .description span::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1vh;
+  background: black;
+  margin: 1vw 0;
+}
+.current > .content-img {
+  animation: contentImgMoveIn 3s forwards;
+}
+.current > .description > span::before {
+  animation: contentBeforeMoveIn 3s forwards;
+}
+
+.current > .content-img::before {
+  content: "About";
+  display: block;
+  position: absolute;
+  font-size: 5vw;
+  top: -6vw;
+  left: -0.6vw;
+}
+.description {
+  font-size: 1.5vw;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* animations  */
+@keyframes contentImgMoveIn {
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0vw);
+  }
+}
+@keyframes contentBeforeMoveIn {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(0vw);
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 1023px) {
 }
 </style>
