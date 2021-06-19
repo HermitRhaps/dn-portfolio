@@ -4,24 +4,23 @@
       <div class="body">
         <div class="header">
           <span
-            >Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.</span
+            >A young specialist with an irrepressible desire to develop.</span
           >
         </div>
         <div class="content-img">
           <img src="../assets/old_comp.jpeg" alt="content-img" />
         </div>
         <div class="description">
-          <span
-            >Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.</span
+          <span>
+            and i have experience in commercial development using
+            React/Redux/Saga for frontend part and writing an API for
+            interacting with relational databases using Node JS/Express/ORM.
+            Also familiar with the concept of pixel perfect site layout, testing
+            and component styling using Bootstrap and Material-UI. In my free
+            time, I deepen my knowledge of NodeJS and JWT/CRUD and study UX/UI
+            design. I set a goal for myself in the future to achieve the
+            position of team lead in the shortest possible time and to develop
+            my own startup in the field of IT.</span
           >
         </div>
       </div>

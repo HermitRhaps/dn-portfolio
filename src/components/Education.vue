@@ -5,12 +5,12 @@
         <div class="content-img">
           <div class="img">
             <span>BNTU</span>
-            <img src="../assets/books-img.jpeg" alt="content-img-2" />
+            <img src="../assets/bntu.jpeg" alt="content-img-1" />
             <span>Software engineer</span>
           </div>
           <div class="img">
             <span>TeachMeSkills</span>
-            <img src="../assets/courses.jpeg" alt="content-img-3" />
+            <img src="../assets/courses.jpeg" alt="content-img-2" />
             <span>Student Lab</span>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default {
 }
 .content-img .img img {
   height: auto;
-  max-width: 70%;
+  min-width: 75%;
 }
 
 .body::before {
@@ -74,11 +74,11 @@ export default {
 }
 .content-img .img:nth-child(1) {
   align-self: flex-start;
-  max-width: 30%;
+  width: 50%;
 }
 .content-img .img:nth-child(2) {
   align-self: center;
-  max-width: 65%;
+  max-width: 35%;
 }
 .current {
   opacity: 1;
@@ -88,7 +88,7 @@ export default {
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 1023px) {
   .content-img {
-    width: 100vw;
+    min-width: 75%;
     flex-direction: column;
     justify-content: center;
   }
@@ -96,20 +96,16 @@ export default {
     font-size: 7vh;
   }
   .content-img .img:nth-child(1) {
-    align-self: flex-start;
+    width: 100%;
+  }
+  .content-img .img:nth-child(2) {
     max-width: 75%;
   }
   .content-img .img span {
     font-size: 6vw;
   }
-  .content-img .img:nth-child(2) {
-    align-self: center;
-    max-width: 100%;
-    display: flex;
-    align-items: flex-end;
-  }
   .content-img .img span:last-of-type {
-    font-size: 5vw;
+    font-size: 4vw;
   }
 }
 </style>
