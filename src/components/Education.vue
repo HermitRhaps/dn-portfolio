@@ -1,13 +1,8 @@
 <template>
   <div id="education">
-    <div class="container education">
+    <div class="container">
       <div class="body">
         <div class="content-img">
-          <div class="img">
-            <span>School</span>
-            <img src="../assets/school.jpeg" alt="content-img-1" />
-            <span>11 years</span>
-          </div>
           <div class="img">
             <span>BNTU</span>
             <img src="../assets/books-img.jpeg" alt="content-img-2" />
@@ -61,7 +56,7 @@ export default {
 }
 .content-img .img img {
   height: auto;
-  min-width: 10%;
+  max-width: 70%;
 }
 
 .body::before {
@@ -83,13 +78,32 @@ export default {
 }
 .content-img .img:nth-child(2) {
   align-self: center;
-  max-width: 25%;
+  max-width: 65%;
 }
-.content-img .img:nth-child(3) {
-  align-self: flex-end;
-  max-width: 45%;
+.current {
+  opacity: 1;
 }
-
 @media only screen and (min-device-width: 320px) and (max-device-width: 1023px) {
+  .content-img {
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .content-img .img:nth-child(1) {
+    align-self: flex-start;
+    max-width: 75%;
+  }
+  .content-img .img span {
+    font-size: 6vw;
+  }
+  .content-img .img:nth-child(2) {
+    align-self: center;
+    max-width: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+  .content-img .img span:last-of-type {
+    font-size: 5vw;
+  }
 }
 </style>

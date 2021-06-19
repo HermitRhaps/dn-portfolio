@@ -4,6 +4,7 @@
       <Initial />
       <About />
       <Education />
+      <Other />
     </div>
   </div>
 </template>
@@ -12,12 +13,14 @@
 import Initial from "./components/Initial.vue";
 import About from "./components/About.vue";
 import Education from "./components/Education.vue";
+import Other from "./components/Other.vue";
 export default {
   name: "App",
   components: {
     Initial,
     About,
     Education,
+    Other,
   },
   mounted: function () {
     window.addEventListener("scroll", function () {
@@ -42,7 +45,8 @@ export default {
 #app,
 #about,
 #initial,
-#education {
+#education,
+#other {
   height: 100vh;
   width: 100vw;
   background-color: rgb(236, 238, 233);

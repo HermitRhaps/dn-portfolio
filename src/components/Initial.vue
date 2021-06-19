@@ -18,8 +18,7 @@
           <a href="#education" class="part" data-part="2"
             ><div data-part="2"
           /></a>
-          <div class="part" data-part="3" />
-          <div class="part" data-part="4" />
+          <a href="#other" class="part" data-part="3"><div data-part="3" /></a>
         </div>
       </div>
     </div>
@@ -132,13 +131,7 @@ export default {
   bottom: -5vh;
 }
 .part:nth-child(3)::before {
-  content: "Knowledge.";
-  position: absolute;
-  font-size: 1.6vw;
-  bottom: -5vh;
-}
-.part:nth-child(4)::before {
-  content: "Talk w/ me.";
+  content: "Other info.";
   position: absolute;
   font-size: 1.6vw;
   bottom: -5vh;
@@ -149,16 +142,10 @@ export default {
   background-repeat: no-repeat;
   transition-duration: 2s;
 }
-.part:nth-child(4) {
-  background-image: url("../assets/talk.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
-  transition-duration: 2s;
-}
+
 .part:nth-child(1):hover:before,
 .part:nth-child(2):hover:before,
-.part:nth-child(3):hover:before,
-.part:nth-child(4):hover:before {
+.part:nth-child(3):hover:before {
   font-size: 3vw;
   top: 25vh;
   text-align: center;
@@ -170,8 +157,7 @@ export default {
 
 .part:nth-child(1):hover,
 .part:nth-child(2):hover,
-.part:nth-child(3):hover,
-.part:nth-child(4):hover {
+.part:nth-child(3):hover {
   background-size: cover;
   min-width: 60vw;
   overflow: hidden;
@@ -205,10 +191,9 @@ export default {
   }
   .part:nth-child(1)::before,
   .part:nth-child(2)::before,
-  .part:nth-child(3)::before,
-  .part:nth-child(4)::before {
+  .part:nth-child(3)::before {
     bottom: -4vh;
-    font-size: 4vw;
+    font-size: 3vw;
   }
 }
 </style>

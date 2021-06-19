@@ -43,7 +43,7 @@ export default {
   position: relative;
 }
 .content-img {
-  width: 40vw;
+  max-width: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,7 +69,7 @@ export default {
   display: block;
   position: absolute;
   font-size: 3vw;
-  top: 7vw;
+  top: 5vh;
   right: -0.6vw;
 }
 .content-img > img {
@@ -88,7 +88,6 @@ export default {
   top: -6vw;
   left: -0.6vw;
 }
-
 .current > .description {
   opacity: 1;
 }
@@ -141,5 +140,30 @@ export default {
   }
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 1023px) {
+  .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .header {
+    padding: 1vh;
+    font-size: 3vw;
+  }
+  .description {
+    font-size: 3vw;
+    height: 20%;
+  }
+  .content-img {
+    padding: 1vh;
+    font-size: 3vw;
+  }
+  .description > span::before {
+    content: "👋 i'm Nemov Dmitry";
+    display: block;
+    position: absolute;
+    font-size: 3vw;
+    top: -7vh;
+    right: -0.6vw;
+  }
 }
 </style>
