@@ -31,6 +31,7 @@ export default {
   width: 100vw;
   padding: 10vh 4vw;
   display: flex;
+  overflow: hidden;
   align-items: center;
   justify-content: center;
 }
@@ -55,6 +56,7 @@ export default {
   font-size: 3vw;
 }
 .content-img .img img {
+  max-width: 60vw;
   height: auto;
 }
 
@@ -79,7 +81,7 @@ export default {
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 1023px) {
   .content-img {
-    min-width: 75%;
+    min-width: 75vw;
     flex-direction: column;
     justify-content: center;
   }
@@ -88,6 +90,7 @@ export default {
   }
   .content-img .img {
     max-width: 65%;
+    padding: 5vw;
   }
   .img:nth-child(2) {
     align-self: flex-end;
@@ -98,6 +101,16 @@ export default {
   }
   .content-img .img span:last-of-type {
     font-size: 4vw;
+  }
+  .content-img .img img {
+    display: none;
+  }
+  .content-img .img span:nth-last-child(1) {
+    content: "";
+    display: flex;
+    height: 0.05vh;
+    width: 100%;
+    background-color: black;
   }
 }
 </style>
