@@ -24,9 +24,11 @@ export default {
   },
   mounted: function () {
     window.addEventListener("scroll", function () {
-      document
-        .elementFromPoint(window.scrollX, window.scrollY)
-        .classList.add("current");
+      document.elementFromPoint(window.scrollX, window.scrollY)
+        ? document
+            .elementFromPoint(window.scrollX, window.scrollY)
+            .classList.add("current")
+        : false;
     });
   },
 };

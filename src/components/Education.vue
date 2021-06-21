@@ -29,7 +29,7 @@ export default {
 .body {
   height: 100vh;
   width: 100vw;
-  padding: 5vw;
+  padding: 10vh 4vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,14 +38,14 @@ export default {
   opacity: 0;
 }
 .content-img {
-  width: 85vw;
+  max-width: 100%;
   height: 100%;
   padding: 1vh;
   display: flex;
 }
 .content-img .img {
-  width: 100%;
-  max-height: 75%;
+  max-width: 35%;
+  height: auto;
   display: flex;
   flex-direction: column;
   padding: 1vh;
@@ -56,7 +56,6 @@ export default {
 }
 .content-img .img img {
   height: auto;
-  min-width: 75%;
 }
 
 .body::before {
@@ -71,14 +70,6 @@ export default {
 }
 .content-img .img span:last-of-type {
   font-size: 2vw;
-}
-.content-img .img:nth-child(1) {
-  align-self: flex-start;
-  width: 50%;
-}
-.content-img .img:nth-child(2) {
-  align-self: center;
-  max-width: 35%;
 }
 .current {
   opacity: 1;
@@ -95,11 +86,12 @@ export default {
   .body::before {
     font-size: 7vh;
   }
-  .content-img .img:nth-child(1) {
-    width: 100%;
+  .content-img .img {
+    max-width: 65%;
   }
-  .content-img .img:nth-child(2) {
-    max-width: 75%;
+  .img:nth-child(2) {
+    align-self: flex-end;
+    text-align: end;
   }
   .content-img .img span {
     font-size: 6vw;
