@@ -70,28 +70,29 @@ export default {
   position: relative;
 }
 .logo-holder {
-  padding: 0.45vw;
+  width: 100%;
+  padding: 0.45rem;
 }
 .logo {
-  min-width: 10vh;
-  max-width: 12vh;
+  max-width: 5%;
+  height: auto;
   filter: invert(1);
 }
 .author-holder {
   padding: 0.15vw;
-  font-size: 6vh;
+  font-size: 4rem;
+  height: auto;
 }
 .author-holder > span {
   position: relative;
-  padding: 1vw;
-  display: inline-block;
+  padding: 1rem;
 }
 .author-holder > span::after {
   content: "Frontend Developer";
   position: absolute;
-  font-size: 2.5vh;
+  font-size: 2rem;
   right: 0;
-  top: -0.45vh;
+  top: -0.45rem;
   transition-duration: 2s;
 }
 .parts {
@@ -115,7 +116,7 @@ export default {
 .part:nth-child(1)::before {
   content: "About.";
   position: absolute;
-  font-size: 1.6vw;
+  font-size: 2rem;
   bottom: -5vh;
 }
 .part:nth-child(2) {
@@ -127,13 +128,13 @@ export default {
 .part:nth-child(2)::before {
   content: "Education.";
   position: absolute;
-  font-size: 1.6vw;
+  font-size: 2rem;
   bottom: -5vh;
 }
 .part:nth-child(3)::before {
   content: "Other info.";
   position: absolute;
-  font-size: 1.6vw;
+  font-size: 2rem;
   bottom: -5vh;
 }
 .part:nth-child(3) {
@@ -159,17 +160,18 @@ export default {
 .part:nth-child(2):hover,
 .part:nth-child(3):hover {
   background-size: cover;
-  min-width: 60vw;
+  min-width: 75%;
   overflow: hidden;
 }
 
 .theme {
   position: absolute;
   top: 0;
-  padding: 1vh;
+  padding: 1rem;
 }
 .theme > img {
-  width: 5vh;
+  min-width: 5rem;
+  height: auto;
 }
 @keyframes textShownUp {
   0% {
@@ -182,6 +184,20 @@ export default {
   }
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 1023px) {
+  .theme img {
+    min-width: 3rem;
+  }
+  .logo {
+    max-width: 20%;
+    height: auto;
+  }
+  .author-holder > span {
+    padding: 1rem;
+    font-size: 2rem;
+  }
+  .author-holder > span::after {
+    font-size: 1rem;
+  }
   .parts {
     min-width: 90vw;
   }
@@ -194,6 +210,17 @@ export default {
   .part:nth-child(3)::before {
     bottom: -4vh;
     font-size: 3vw;
+  }
+  .part:nth-child(1):hover:before,
+  .part:nth-child(2):hover:before,
+  .part:nth-child(3):hover:before {
+    display: none;
+  }
+
+  .part:nth-child(1):hover,
+  .part:nth-child(2):hover,
+  .part:nth-child(3):hover {
+    display: none;
   }
 }
 </style>

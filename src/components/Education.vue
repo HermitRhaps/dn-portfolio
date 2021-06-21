@@ -27,11 +27,9 @@ export default {
 
 <style scoped>
 .body {
-  height: 100vh;
-  width: 100vw;
-  padding: 10vh 4vw;
+  width: 100%;
+  padding: 10rem 1rem;
   display: flex;
-  overflow: hidden;
   align-items: center;
   justify-content: center;
 }
@@ -39,39 +37,38 @@ export default {
   opacity: 0;
 }
 .content-img {
-  max-width: 100%;
-  height: 100%;
-  padding: 1vh;
+  max-width: 70%;
+  padding: 1rem;
   display: flex;
 }
 .content-img .img {
-  max-width: 35%;
+  max-width: 85%;
   height: auto;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  padding: 1vh;
 }
 
 .content-img .img span {
-  font-size: 3vw;
+  font-size: 3rem;
 }
 .content-img .img img {
-  max-width: 60vw;
+  max-width: 75%;
   height: auto;
 }
 
 .body::before {
   content: "Education";
-  right: 1vw;
-  top: 1vw;
+  right: 1rem;
+  top: 1rem;
   display: block;
   position: absolute;
-  font-size: 10vh;
-  padding: 1vw;
-  border-right: 1vw solid black;
+  font-size: 5rem;
+  padding: 1rem;
+  border-right: 1rem solid black;
 }
 .content-img .img span:last-of-type {
-  font-size: 2vw;
+  font-size: 2rem;
 }
 .current {
   opacity: 1;
@@ -80,27 +77,26 @@ export default {
   filter: invert(1);
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 1023px) {
+  .body::before {
+    border-right: 0.25rem solid black;
+  }
   .content-img {
-    min-width: 75vw;
+    min-width: 75%;
     flex-direction: column;
     justify-content: center;
   }
   .body::before {
     font-size: 7vh;
   }
-  .content-img .img {
-    max-width: 65%;
-    padding: 5vw;
-  }
   .img:nth-child(2) {
     align-self: flex-end;
     text-align: end;
   }
   .content-img .img span {
-    font-size: 6vw;
+    font-size: 2rem;
   }
   .content-img .img span:last-of-type {
-    font-size: 4vw;
+    font-size: 1rem;
   }
   .content-img .img img {
     display: none;
@@ -108,7 +104,7 @@ export default {
   .content-img .img span:nth-last-child(1) {
     content: "";
     display: flex;
-    height: 0.05vh;
+    height: 0.05rem;
     width: 100%;
     background-color: black;
   }

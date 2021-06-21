@@ -85,21 +85,19 @@ export default {
 
 <style scoped>
 .body {
-  width: 100vw;
-  height: 100vh;
-  padding: 2vw;
+  width: 100%;
+  padding: 1rem;
 }
 .terminal {
   background-color: rgb(30, 30, 36);
   width: 100%;
-  height: 100%;
-  border-radius: 0.35vw;
+  /* min-height: 100%; */
+  border-radius: 0.35rem;
   position: relative;
 }
 .terminal-buttons {
-  padding: 0 1vh;
+  padding: 2rem 1rem;
   width: 100%;
-  height: 5vh;
   border-bottom: 0.45vh solid rgb(236, 238, 233);
   display: flex;
   align-items: center;
@@ -134,9 +132,9 @@ export default {
   margin: 0 0.35vh;
 }
 .terminal-body {
-  padding: 1vw;
+  padding: 0.75rem;
   color: white;
-  font-size: 1.5vw;
+  font-size: 2rem;
 }
 .request::before {
   content: "~";
@@ -148,6 +146,7 @@ export default {
   height: 100%;
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 .result {
   min-width: 5vw;
@@ -161,10 +160,19 @@ export default {
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 1023px) {
   .terminal-body {
-    font-size: 4.5vw;
+    font-size: 1rem;
   }
   .results {
     flex-wrap: wrap;
+  }
+  .button-exit,
+  .button-minimize,
+  .button-fullscreen {
+    width: 1.05rem;
+    height: 1.05rem;
+  }
+  .terminal-buttons {
+    padding: 1rem;
   }
 }
 </style>

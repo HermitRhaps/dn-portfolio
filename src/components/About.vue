@@ -38,41 +38,38 @@ export default {
 .body {
   height: 100vh;
   width: 100vw;
-  padding: 5vw;
+  padding: 5rem;
   position: relative;
 }
 .content-img {
   max-width: 100vh;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  border-left: 0.7vw solid black;
+  border-left: 0.7rem solid black;
   transform: translateX(-100vw);
 }
 .header {
   position: absolute;
   top: 0;
-  left: 1vw;
-  font-size: 2.2vw;
+  left: 1rem;
+  font-size: 2.2rem;
   opacity: 0;
   transition-duration: 2s;
 }
-.description {
-  opacity: 0;
-  transition-duration: 4s;
-  position: relative;
-}
-.description > span::before {
+.description::before {
   content: "👋 i'm Nemov Dmitry";
   display: block;
   position: absolute;
-  font-size: 3vw;
-  top: 5vh;
-  right: -0.6vw;
+  font-size: 3rem;
+  top: -3rem;
+  right: 0;
 }
 .content-img > img {
   width: 95%;
+  height: auto;
 }
 .current > .header {
   opacity: 1;
@@ -80,12 +77,12 @@ export default {
 .current > .header span::before {
   content: "";
   display: block;
-  font-size: 5vw;
+  font-size: 5rem;
   width: 100%;
-  height: 1vh;
+  height: 0.55rem;
   background: black;
-  top: -6vw;
-  left: -0.6vw;
+  top: -6rem;
+  left: -0.6rem;
 }
 .current > .description {
   opacity: 1;
@@ -94,9 +91,9 @@ export default {
   content: "";
   display: block;
   width: 100%;
-  height: 1vh;
+  height: 0.55rem;
   background: black;
-  margin: 1vw 0;
+  margin: 1rem 0;
 }
 .invert > .description span::after {
   filter: invert(0);
@@ -123,16 +120,20 @@ export default {
   content: "About";
   display: block;
   position: absolute;
-  font-size: 5vw;
-  top: -6vw;
-  left: -0.6vw;
+  font-size: 5rem;
+  top: -6rem;
+  left: -0.6rem;
 }
 .description {
-  font-size: 1.5vw;
+  font-size: 1vw;
+  position: relative;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  height: 100%;
+  padding: 1rem;
+  opacity: 0;
+  transition-duration: 4s;
+  position: relative;
 }
 
 /* animations  */
@@ -170,13 +171,37 @@ export default {
     padding: 1vh;
     font-size: 3vw;
   }
-  .description > span::before {
-    content: "👋 i'm Nemov Dmitry";
-    display: block;
-    position: absolute;
-    font-size: 3vw;
-    top: -7vh;
-    right: -0.6vw;
+  .description::before {
+    font-size: 1.5rem;
+    top: -7rem;
+    right: 2rem;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+  .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .header {
+    padding: 0.1rem;
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 1.5rem;
+  }
+  .content-img {
+    width: 50%;
+    padding: 0.51rem;
+  }
+  .current > .content-img::before {
+    font-size: 2rem;
+    top: -3rem;
+  }
+  .description::before {
+    font-size: 2rem;
+    top: -1.5rem;
+    right: 2rem;
   }
 }
 </style>
